@@ -5,10 +5,12 @@ import logging
 import texts
 import os
 from keyboards import trapped_kb, barrel_kb, friend_kb, note_kb, beach_kb, boat_kb, congrats_kb, light_note_kb
+import config
 
 logging.basicConfig(level=logging.INFO)
 
-API_TOKEN = str(os.environ.get('BOT_TOKEN'))
+# API_TOKEN = str(os.environ.get('BOT_TOKEN'))
+API_TOKEN = config.BOT_TOKEN
 
 storage = MemoryStorage()
 bot = Bot(token=API_TOKEN)
