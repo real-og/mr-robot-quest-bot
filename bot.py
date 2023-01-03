@@ -139,6 +139,10 @@ async def get_menu(message: types.Message):
     else:
         await message.answer(texts.default_ans, reply_markup=congrats_kb)
 
+@dp.message_handler()
+async def get_stateless(message: types.Message):
+    await message.answer(texts.default_ans)
+
 
 if __name__ == '__main__':
     executor.start_polling(dp, skip_updates=True)
